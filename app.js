@@ -8,11 +8,7 @@ document.getElementById('image').src = `${exports.imageLink}${request}.gif`;
 document.getElementById('name').innerHTML = exports.BattlePokedex[request].name;
 
 function add(toDo) {
-  if (toDo == '+') {
-    return document.getElementById('attempts').innerHTML++;
-  }
-  if (toDo == '-') {
-    return document.getElementById('attempts').innerHTML--;
-  }
-  return console.error('Can not find + / -')
+  if (toDo == '+') return document.getElementById('attempts').innerHTML++;
+  if (document.getElementById('attempts').innerHTML == 0) return;
+  if (toDo == '-') return document.getElementById('attempts').innerHTML--;
 }
